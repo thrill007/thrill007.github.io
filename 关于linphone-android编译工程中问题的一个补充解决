@@ -1,0 +1,7 @@
+补充:
+1. 在某次make的时候不小心电脑死掉了，重启后编译总是出错：报告can not create service ... failed to lock /usr/local/src/linphone-android/.gradle/.../taskHistory/ ... has already been locked by this process...
+
+解决办法:
+ps -A|grep -i gradle
+kill -9 687 (687是上句显示出来的pid)
+然后make， ok
