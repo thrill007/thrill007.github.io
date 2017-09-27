@@ -1,0 +1,9 @@
+mac的时间机器备份比较好用，但是需要较大的移动硬盘，并且如果移动硬盘质量不好可能数据会丢失，如果你还有一台linux pc，也可以用来作为mac的云端时间胶囊，个人感觉更加好用.以ubuntu为例
+
+sudo apt-get install netatalk 2.安装Avahi，Avahi在Ubuntu 中是默认安装的，同样使用Ubuntu的就不要再装了，Avahi是Apple's Zeroconf 协议的开源实现。他可以帮助Mac 机器发现 Linux 机器，并访问 3.sudo gedit /etc/netatalk/AppleVolumes.default 用“#”把~/ “Home Directory” 这行注释掉，防止Home目录被作为AFP变混乱,最后加上一行你希望存放的目录，并对此目录加上 “options:tm” ,使netatalk可以作为Time Machine服务器: ~/backup-for-mac "options:tm"
+sudo touch file /etc/avahi/services/afpd.service 以创建配置文件，接着输入： sudo gedit /etc/avahi/services/afpd.service 打开afpd.service 并写入： %h _afpovertcp._tcp 548 _device-info._tcp 0 model=Xserve 保存退出就可以了
+为了安全起见，最好重启一下两个服务，分别在终端输入： sudo service netatalk restart sudo service avahi-deamon restart 
+查找ubuntu pc的名字,例如zhangsan-desktop 
+mac中打开finder, command+k，‘浏览', 找到zhangsan-desktop，连接，需要输入ubuntu pc的用户名和密码 
+连接好之后，打开time machine偏好设置-->选择磁盘-->backup-for-mac
+接下来就可以备份了
