@@ -1,14 +1,16 @@
 ---
 layout: post
 title:  "linphone-android编译安装"
-date:   2017-09-27
+date:   2015- 14:06:05
 categories: Front-end JavaScript
 excerpt: linphone-android编译和安装。
 ---
 
 * content
 {:toc}
-# 关于linphone的编译和安装1
+
+
+## 关于linphone的编译和安装1
 voip的客户端实在不少，zipper, xlite，linphone等。。，其中linphone算是个老牌的voip客户端了，功能非常庞大，但是也带来了它的庞大的‘体积‘这个弊端，源代码下载下来要有1.3个G左右(最新版), 比服务器(例如freeswitch)都大，编译好后甚至达到3.3G(说实话，个人觉得它太臃肿了，成了它最大的缺点)，好了，言归正传，本文简单讲下linphone-android的编译(linphone-desktop, linphone-iphone等编译相对简单，最复杂的就是linphone-android, 所以这里以android客户端的编译为例)：
 1. 下载：个人建议不要从官方git下载(git://git.linphone.org/linphone-android.git --recursive)，笔者就在这个坑里浪费了不少时间，一个是速度很慢，然后个吧小时后看似下载完毕了，没有报错，其实某些模块没有下载成功，然后编译中间的错误信息也看不出来问题所在。
 建议下载地址： 2017年09月27日网页链接，笔者验证过下载比官网快很多(和官网同步是最新版本).
