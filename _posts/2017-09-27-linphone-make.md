@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "linphone-android编译安装"
-date:   2015- 14:06:05
+date:   2017-09-27 14:06:05
 categories: Front-end JavaScript
 excerpt: linphone-android编译和安装。
 ---
